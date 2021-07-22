@@ -15,7 +15,7 @@ límite en cuanto al número de artículos que un representante puede vender.*/
 
 package ejercicio6;
 
-public class Vendedores {
+public class Vendedores extends Articulos {
     
     private double gananciaVendedor;
 
@@ -33,10 +33,9 @@ public class Vendedores {
     
     public void vender(int... ventasDelVendedor) {
         this.setGananciaVendedor(2000);
-        double[] listaDeArticulos = new double[]{7239.99, 9129.75, 6899.95, 13150.89};
         for (int articulo = 0; articulo < ventasDelVendedor.length ; articulo++){
             if ((ventasDelVendedor[articulo]>0)&&(ventasDelVendedor[articulo]<5)){
-                this.gananciaVendedor = this.gananciaVendedor + (listaDeArticulos[ventasDelVendedor[articulo]-1] * 0.06);
+                this.gananciaVendedor = this.gananciaVendedor + (this.getListaDeArticulos()[ventasDelVendedor[articulo]-1] * 0.06);
             }
         }
         System.out.println("Ganancia del vendedor: $" + String.format("%.2f", this.getGananciaVendedor()));
