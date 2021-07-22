@@ -31,11 +31,11 @@ public class Vendedores extends Articulos {
         this.gananciaVendedor = 0;
     }
     
-    public void vender(int... ventasDelVendedor) {
+    public void vender(int... articulosVendidos) {
         this.setGananciaVendedor(2000);
-        for (int articulo = 0; articulo < ventasDelVendedor.length ; articulo++){
-            if ((ventasDelVendedor[articulo]>0)&&(ventasDelVendedor[articulo]<5)){
-                this.gananciaVendedor = this.gananciaVendedor + (this.getListaDeArticulos()[ventasDelVendedor[articulo]-1] * 0.06);
+        for (int numeroDeVenta = 0; numeroDeVenta < articulosVendidos.length ; numeroDeVenta++){
+            if ((articulosVendidos[numeroDeVenta]>0)&&(articulosVendidos[numeroDeVenta]<5)){
+                this.gananciaVendedor = this.gananciaVendedor + (this.getListaDeArticulos()[articulosVendidos[numeroDeVenta]-1] * 0.06);
             }
         }
         System.out.println("Ganancia del vendedor: $" + String.format("%.2f", this.getGananciaVendedor()));

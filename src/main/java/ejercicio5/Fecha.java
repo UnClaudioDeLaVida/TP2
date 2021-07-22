@@ -48,7 +48,7 @@ public class Fecha {
         this.mes = this.mesLetrasANumero(_mes);
     }
     
-    public int getMes() {
+    private int getMes() {
         return mes;
     }
 
@@ -56,7 +56,7 @@ public class Fecha {
         this.mes = _mes;
     }
 
-    public int getDia() {
+    private int getDia() {
         return dia;
     }
 
@@ -64,7 +64,7 @@ public class Fecha {
         this.dia = _dia;
     }
 
-    public int getAnio() {
+    private int getAnio() {
         return anio;
     }
 
@@ -90,8 +90,11 @@ public class Fecha {
     
     public void mostrarFecha() {
         System.out.println("DD/MM/AAAA: " + this.getDia() + "/" + this.getMes() + "/" + this.getAnio());
-        System.out.println("Mes DD, AAAA: " + this.mesNumeroALetras(this.mes) + " " + this.dia + ", " + this.anio);
-        System.out.println("DD Mes AA: " + this.dia + " " + this.mesNumeroALetras(this.mes) + " " + this.anio%100 + "\n");
+        System.out.println("Mes DD, AAAA: " + this.mesNumeroALetras(this.mes) + " " + String.format("%02d", this.dia) + ", " + String.format("%02d", this.anio));
+        System.out.println("DD Mes AA: " + String.format("%02d", this.dia) + " " + this.mesNumeroALetras(this.mes) + " " + String.format("%02d", this.anio%100) + "\n");
     }
+    
+     
+    
     
 }
