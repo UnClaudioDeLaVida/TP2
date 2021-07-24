@@ -8,7 +8,7 @@ y muestre el salario anual de cada objeto. Después, proporcione a cada Empleado
 10% y muestre el salario anual de cada Empleado otra vez.*/
 package ejercicio1;
 
-public final class Empleado extends Articulos {
+public final class Empleado{
 
     private String nombre;
     private String apellido;
@@ -53,7 +53,6 @@ public final class Empleado extends Articulos {
     public void aumentarSalarioMensual(double porcentajeAumento) {
         if (this.salarioMensual > 0) {
             this.salarioMensual = this.salarioMensual * (1 + (porcentajeAumento / 100));
-        //System.out.println("Salario mensual modificado exitosamente a " + String.format("%.2f", this.salarioMensual));
         System.out.println("Salario mensual modificado exitosamente a " + String.format("%.2f", this.getSalarioMensual()));
         }
     }

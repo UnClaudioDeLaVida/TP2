@@ -18,10 +18,10 @@ en la parte inferior de las columnas totalizadas.*/
 
 package ejercicio7;
 
-/**
- *
- * @author claudio
- */
-public class NewClass {
+public class Vendedor {
     
+    private float susVentasTotales;
+    public Vendedor(){
+        
+    }
 }
